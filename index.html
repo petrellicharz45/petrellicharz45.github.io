@@ -71,11 +71,24 @@
         .skill:hover, .project:hover {
             transform: translateY(-10px);
         }
+        .education {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
         footer {
             background: #1565c0;
             color: #fff;
             text-align: center;
             padding: 20px;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
         }
         @keyframes fadeInDown {
             from {
@@ -115,10 +128,10 @@
             <h2>About Me</h2>
             <p>
                 I am an experienced IT professional specializing in Artificial Intelligence, 
-                Machine Learning, Data Analysis, and software development. With a strong 
+                Machine Learning, Data Analysis, and software development. <br>With a strong 
                 academic background and a passion for innovation, I have worked on numerous 
                 projects including financial automation systems, dynamic websites, and custom 
-                business solutions.
+                business solutions.<br>As a lecturer at Ndejje University, I teach programming languages like Python, PHP, HTML, and Linux, along with IT-related courses.
             </p>
         </div>
     </section>
@@ -182,11 +195,35 @@
                 <h3>Road Safety Concerns Uganda</h3>
                 <a href="https://roadsafetyconcernsug.org/">Visit Site</a>
             </div>
+            <div class="project">
+                <h3>Business Management System</h3>
+                <p>POS system developed for Riverine Resort Bududa.</p>
+                <a href="https://riverineresort.com/">Visit Site</a>
+            </div>
+        </div>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education">
+            <p><strong>World Quant University:</strong> Applied Data Science (September 2021)</p>
+            <p><strong>Ndejje University:</strong> Bachelor of Business Computing (August 2017 - March 2021)</p>
+            <p><strong>St. Stephens College Bajja:</strong> UCE (2011 - 2014) | UACE (2015 - 2016)</p>
         </div>
     </section>
     <footer>
         <p>Contact: kiwalabye45charles@gmail.com | +256704415668</p>
         <p>Follow me on <a href="https://www.linkedin.com/in/kiwalabye-charles-a381b018b/" style="color: #ffeb3b;">LinkedIn</a></p>
     </footer>
+    <script>
+        // Add animations or interactivity using JavaScript
+        document.querySelectorAll('.project').forEach(project => {
+            project.addEventListener('mouseover', () => {
+                project.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)';
+            });
+            project.addEventListener('mouseout', () => {
+                project.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
+            });
+        });
+    </script>
 </body>
 </html>
